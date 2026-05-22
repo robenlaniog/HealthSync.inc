@@ -1,0 +1,594 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* BASE BODY */
+body {
+    background: #c6e3fb;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    min-height: 55px;
+    padding: 13px 8%;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* WEBSITE LOGO */
+.logo {
+    width: 280px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* NAVIGATION */
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 25px;
+}
+
+.main-nav {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #0d47a1;
+    font-weight: 600;
+    font-size: 18px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.main-nav a:hover {
+    color: #42a5f5;
+    border-bottom: 2px solid #42a5f5;
+    transform: translateY(-2px);
+}
+
+.main-nav a.active {
+    color: #42a5f5;
+    border-bottom: 2px solid #42a5f5;
+}
+
+/* ACCOUNT AND LOGOUT BUTTON GROUP */
+.myaccount {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 15px;
+    padding-left: 15px;
+    border-left: 1px solid #ddd;
+    flex-shrink: 0;
+}
+
+.nav-auth-btn {
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    height: 42px;
+}
+
+.account-btn {
+    background: #1565c0;
+    color: white;
+}
+
+.account-btn:hover {
+    background: #0d47a1;
+    transform: translateY(-2px);
+}
+
+.logout-btn {
+    color: #d32f2f;
+    border: 2px solid #d32f2f;
+    background: transparent;
+}
+
+.logout-btn:hover {
+    background: #d32f2f;
+    color: white;
+}
+
+/* Hero */
+/* Full width hero banner, with page headline and image background */
+.hero {
+    background: #c6e3fb;
+    color: #0b5ed7;
+    padding: 40px 8% 20px;
+}
+
+.hero-content {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #1a1a1a;
+}
+
+.hero-image-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-img {
+    width: 360px;
+    max-width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* ── MAIN CONTENT ── */
+.main-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 48px 16px;
+    flex: 1;
+}
+
+/* SEARCH BAR / Align in Blog Grid */
+.search-container {
+    width: 66.90%;
+}
+
+.search-wrapper {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.search-wrapper input {
+    width: 150%;
+    background-color: #ffffff;
+    border: 2px solid #222;
+    border-radius: 9999px;
+    padding: 1rem 1.5rem;
+    padding-left: 3.5rem;
+    font-size: 1.125rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.search-wrapper input:focus {
+    border-color: #3b82f6;
+}
+
+.search-icon {
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.search-submit {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #1253d4;
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.search-submit:hover {
+    background: #0d47a1;
+}
+
+/* SIDE BY SIDE LAYOUT: BLOG GRID WIDER + SIDEBAR NARROWER */
+.content-layout {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+}
+
+.blog-section {
+    flex: 2;
+    min-width: 0;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+/* BLOG CARDS DESIGN */
+/* CARD WITH HOVER LIFT ANIMATION */
+.blog-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid #f3f4f6;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* CARD IMAGE / FIXED HEIGHT WITH OBJECT-FIT COVER */
+.blog-card img {
+    width: 100%;
+    height: 192px;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.2s ease;
+}
+
+.blog-card:hover img {
+    opacity: 0.92;
+}
+
+/* CARD CONTENT AREA */
+.blog-card-body {
+    padding: 20px;
+}
+
+.blog-category {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+
+/* DATE AND TIME ROW AT THE BOTTOM OF THE CARD */
+.blog-title {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #111827;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.blog-excerpt {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #6b7280;
+    margin-bottom: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* DATE AND TIME ROW AT THE BOTTOM OF THE CARD */
+.blog-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #9ca3af;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 12px;
+}
+
+/* ── SIDEBAR ── */
+.sidebar {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.sidebar-heading {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+.latest-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.latest-item {
+    display: flex;
+    gap: 14px;
+    text-decoration: none;
+    color: inherit;
+    align-items: flex-start;
+}
+
+.latest-item img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+    transition: opacity 0.2s ease;
+}
+
+.latest-item:hover img {
+    opacity: 0.85;
+}
+
+.latest-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #111827;
+    line-height: 1.4;
+}
+
+.latest-date {
+    font-size: 12px;
+    color: #9ca3af;
+    margin-top: 4px;
+}
+
+.newsletter-box {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 24px;
+    padding: 28px;
+}
+
+.newsletter-box h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+.newsletter-box p {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+.newsletter-box input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    font-size: 14px;
+    outline: none;
+    margin-bottom: 12px;
+    transition: border-color 0.2s ease;
+}
+
+.newsletter-box input:focus {
+    border-color: #3b82f6;
+}
+
+.newsletter-box button {
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.newsletter-box button:hover {
+    background: #1d4ed8;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tags span {
+    background: white;
+    padding: 8px 14px;
+    border-radius: 100px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.tags span:hover {
+    background: #bdbdbd;
+}
+
+/* ── FOOTER ── */
+footer {
+    background: #0d47a1;
+    color: white;
+    text-align: center;
+    padding: 12.5px;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* ── RESPONSIVE: TABLET / LAPTOP (<1024px) */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 15px 5%;
+    }
+
+    .nav-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .main-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .myaccount {
+        border-left: none;
+        padding-left: 0;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 40px 5% 20px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .content-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .search-wrapper input {
+        width: 100%;
+    }
+}
+
+/* RESPONSIVE: MOBILES (<768px) */
+@media (max-width: 767px) {
+    .logo {
+        width: 220px;
+    }
+
+    .main-nav a {
+        font-size: 16px;
+    }
+
+    .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+    }
+
+    .main-wrapper {
+        padding: 40px 5%;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-card img {
+        height: 220px;
+    }
+}
+
+
+/* RESPONSIVE: SMALL MOBILE DEVICES */
+@media (max-width: 480px) {
+    header {
+        padding: 12px 4%;
+    }
+
+    .logo {
+        width: 170px;
+    }
+
+    .main-nav {
+        gap: 14px;
+    }
+
+    .main-nav a {
+        font-size: 14px;
+    }
+
+    .nav-auth-btn {
+        font-size: 13px;
+        padding: 7px 14px;
+        height: 38px;
+    }
+
+    .hero {
+        padding: 30px 4% 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 24px;
+    }
+
+    .blog-card-body {
+        padding: 16px;
+    }
+
+    footer {
+        font-size: 13px;
+        padding: 12px;
+    }
+}

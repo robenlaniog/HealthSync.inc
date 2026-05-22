@@ -1,0 +1,451 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* BASE BODY*/
+body {
+    background: #c6e3fb;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    min-height: 55px;
+    padding: 13px 8%;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* WEBSITE LOGO */
+.logo {
+    width: 280px;
+    height: auto;
+}
+
+/* NAVIGATION */
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 25px;
+}
+
+.main-nav {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #0d47a1;
+    font-weight: 600;
+    font-size: 18px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.main-nav a:hover {
+    color: #42a5f5;
+    border-bottom: 2px solid #42a5f5;
+    transform: translateY(-2px);
+}
+
+.main-nav a.active {
+    color: #42a5f5;
+    border-bottom: 2px solid #42a5f5;
+}
+
+/* ACCOUNT AND LOGOUT BUTTON GROUP */
+.myaccount {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 15px;
+    padding-left: 15px;
+    border-left: 1px solid #ddd;
+}
+
+.nav-auth-btn {
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    height: 42px;
+}
+
+.account-btn {
+    background: #1565c0;
+    color: white;
+}
+
+.account-btn:hover {
+    background: #0d47a1;
+    transform: translateY(-2px);
+}
+
+.logout-btn {
+    color: #d32f2f;
+    border: 2px solid #d32f2f;
+    background: transparent;
+}
+
+.logout-btn:hover {
+    background: #d32f2f;
+    color: white;
+}
+
+/* SECTION */
+.section {
+    padding: 5px 8% 60px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 80px;
+    align-items: center;        
+    justify-content: center;    
+    flex-wrap: wrap;
+}
+
+.text-side, .image-side {
+    flex: 1;
+    min-width: 320px;
+}
+
+.text-side h1 {
+    font-size: 2.8rem;
+    color: #0d47a1;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #0571d3;
+    margin-bottom: 20px;
+}
+
+.text-side p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.image-side img {
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px rgba(13, 71, 161, 0.25);
+    transition: transform 0.4s ease;
+}
+
+.image-side img:hover {
+    transform: scale(1.03);
+}
+
+/* MAIN CONTENT*/
+.content {
+    padding: 80px 8%;
+    background: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    display: grid;
+}
+
+.content h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    color: #0d47a1;
+    margin-bottom: 50px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 340px));
+    gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.benefit-card {
+    background: #f8fbff;
+    padding: 35px 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+    border: 1px solid #e0f0ff;
+    height: 100%;                    
+}
+
+.benefit-card h3 {
+    color: #0d47a1;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.back-button-container {
+    max-width: 1200px;
+    margin: 30px 165px 10px;
+    padding: 0 10%;
+}
+
+.conclusion-text {
+    margin-top: 60px;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    color: #1565c0;
+    padding: 14px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #1565c0;
+}
+
+.back-btn:hover {
+    background: #1565c0;
+    color: white;
+    transform: translateX(-5px);
+}
+
+/* Footer*/
+footer {
+    background: #0d47a1;
+    color: white;
+    position: absolute;
+    text-align: center;
+    padding: 12.5px;
+    margin-top: 80px;
+    left: 0;
+    bottom: 1;
+    width: 100%;
+}
+
+/* ── RESPONSIVE: TABLET / LAPTOP (<1024px) */
+@media (max-width: 1024px) {
+
+    header {
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        width: 220px;
+    }
+
+    .nav-wrapper {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-nav {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .myaccount {
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
+    }
+
+    .container {
+        gap: 50px;
+        text-align: center;
+    }
+
+    .text-side h1 {
+        font-size: 2.3rem;
+    }
+
+    .content {
+        padding: 60px 5%;
+    }
+
+    .content h2 {
+        font-size: 2.2rem;
+    }
+
+    .back-button-container {
+        margin: 20px auto;
+        padding: 0 5%;
+    }
+}
+
+
+/* ── RESPONSIVE: TABLET / LAPTOP (<1024px) */
+@media (max-width: 1024px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    .logo {
+        width: 180px;
+    }
+
+    .nav-wrapper {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .main-nav a {
+        font-size: 16px;
+    }
+
+    .myaccount {
+        width: 100%;
+        justify-content: center;
+        border: none;
+        padding: 0;
+        margin: 0;
+        flex-wrap: wrap;
+    }
+
+    .nav-auth-btn {
+        width: auto;
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 30px 5%;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .text-side,
+    .image-side {
+        min-width: 100%;
+    }
+
+    .text-side h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .text-side p {
+        font-size: 1rem;
+    }
+
+    .content {
+        padding: 40px 20px;
+        border-radius: 0;
+    }
+
+    .content h2 {
+        font-size: 1.8rem;
+        margin-bottom: 35px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .benefit-card {
+        padding: 25px 20px;
+    }
+
+    .benefit-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .back-button-container {
+        margin: 20px auto;
+        padding: 0 5%;
+    }
+
+    .back-btn {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    footer {
+        position: relative;
+        margin-top: 50px;
+        font-size: 14px;
+    }
+}
+
+/* RESPONSIVE: SMALL MOBILE DEVICES */
+@media (max-width: 600px) {
+
+    .text-side h1 {
+        font-size: 1.7rem;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .main-nav {
+        gap: 10px;
+    }
+
+    .main-nav a {
+        font-size: 14px;
+    }
+
+    .nav-auth-btn {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+
+    .benefit-card {
+        padding: 20px 15px;
+    }
+}

@@ -1,0 +1,477 @@
+/* ── GLOBAL RESET & BASE STYLES ── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background: #c6e3fb;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/* ── HEADER / NAVIGATION ── */
+header {
+    width: 100%;
+    min-height: 55px;
+    padding: 13px 8%;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    width: 280px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 25px;
+}
+
+.main-nav {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #0d47a1;
+    font-weight: 600;
+    font-size: 18px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.main-nav a:hover {
+    color: #42a5f5;
+    border-bottom: 2px solid #42a5f5;
+    transform: translateY(-2px);
+}
+
+.main-nav a.active {
+    color: #42a5f5;
+    border-bottom: 2px solid #42a5f5;
+}
+
+.myaccount {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 15px;
+    padding-left: 15px;
+    border-left: 1px solid #ddd;
+    flex-shrink: 0;
+}
+/* ── AUTH BUTTONS ── */
+.nav-auth-btn {
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    height: 42px;
+}
+
+.account-btn {
+    background: #1565c0;
+    color: white;
+}
+
+.account-btn:hover {
+    background: #0d47a1;
+    transform: translateY(-2px);
+}
+
+.logout-btn {
+    color: #d32f2f;
+    border: 2px solid #d32f2f;
+    background: transparent;
+}
+
+.logout-btn:hover {
+    background: #d32f2f;
+    color: white;
+}
+
+/* ── HERO / LOGIN LAYOUT ── */
+.hero-banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 80px 8%;
+    gap: 60px;
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #0571d3;
+    margin-bottom: 25px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #3f3f3f;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.hero-text button {
+    padding: 15px 30px;
+    border: 2px solid #1565c0;
+    background: white;
+    color: #1565c0;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.hero-text button:hover {
+    background: #1565c0;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.login-card {
+    background: white;
+    padding: 40px 35px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.login-card:hover {
+    transform: translateY(-10px);
+    transition: .4s;
+}
+
+.login-card h2 {
+    color: #0d47a1;
+    margin-bottom: 25px;
+    text-align: center;
+}
+/* ── INPUT FIELDS ── */
+.input-username,
+.input-password {
+    margin-bottom: 20px;
+}
+
+.input-username label,
+.input-password label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.input-username input,
+.input-password input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.input-username input:focus,
+.input-password input:focus {
+    outline: none;
+    border-color: #1565c0;
+    box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.15);
+}
+
+.input-password {
+    position: relative;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.eyes {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.show-hide {
+    width: 30px;
+    height: auto;
+}
+/* ── LOGIN BUTTON ── */
+.btn {
+    margin: 20px 0;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background: #1565c0;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+    background: #0d47a1;
+    transform: translateY(-2px);
+}
+/* ── REGISTER / LINKS ── */
+.noaccount {
+    color: hsla(0, 0%, 0%, 0.75);
+}
+
+.register-option {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signuplink {
+    color: #0d47a1;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.signuplink:hover {
+    color: #3082fd;
+    text-decoration: underline;
+}
+/* ── REMEMBER / FORGOT PASSWORD ── */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.checkbox-group input {
+    width: 15px;
+    height: 15px;
+    accent-color: #0d47a1;
+    cursor: pointer;
+}
+
+.forgot-password a {
+    color: #0d47a1;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    color: #3082fd;
+    text-decoration: underline;
+}
+
+/* ── WHY CHOOSE US ── */
+.why-choose-us {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    color: #0d47a1;
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.why-choose-us-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.why-choose-us-card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.why-choose-us-card:hover {
+    transform: translateY(-10px);
+}
+
+.why-choose-us-card h3 {
+    color: #0571d3;
+    margin-bottom: 15px;
+    font-size: x-large;
+}
+
+.why-choose-us-card p {
+    font-size: larger;
+}
+
+.clearaccountbtn {
+    position: absolute;
+    right: 20px;
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    background-color: #0d47a1;
+    color: #0d47a1;
+    border: none;
+}
+
+.clearaccountbtn:hover {
+    background-color: #0d47a1;
+    color: white;
+}
+
+/* ── FOOTER ── */
+footer {
+    background: #0d47a1;
+    color: white;
+    padding: 12.5px 20px;
+    width: 100%;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 15px 5%;
+    }
+
+    .nav-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .main-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .myaccount {
+        border-left: none;
+        padding-left: 0;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .hero-banner {
+        grid-template-columns: 1fr;
+        padding: 50px 6%;
+        gap: 40px;
+    }
+
+    .login-card {
+        max-width: 520px;
+    }
+
+    .why-choose-us-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .logo {
+        width: 220px;
+    }
+
+    .main-nav a {
+        font-size: 16px;
+    }
+
+    .hero-banner {
+        padding: 40px 5%;
+        gap: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .why-choose-us-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .why-choose-us {
+        padding: 50px 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 12px 4%;
+    }
+
+    .logo {
+        width: 180px;
+    }
+
+    .main-nav {
+        gap: 14px;
+    }
+
+    .main-nav a {
+        font-size: 14px;
+    }
+
+    .nav-auth-btn {
+        font-size: 13px;
+        padding: 7px 14px;
+        height: 38px;
+    }
+
+    .login-card {
+        padding: 30px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.7rem;
+    }
+}

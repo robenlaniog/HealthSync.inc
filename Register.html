@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthSync Inc.</title>
+    <link rel="stylesheet" href="Css/Register.css">
+</head>
+<body>
+    <!-- Site Header -->
+    <header>
+        <img src="img/HSlogo.png" class="logo">
+        <!-- Main Navigation -->
+        <nav>
+            <a href="Login.html">Home</a>
+            <a href="plans.html">Plans</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About Us</a>
+        </nav>
+    </header>
+    <!-- HERO SECTION -->
+    <section class="hero-banner">
+        <!-- REGISTER FORM -->
+        <form class="register-card" id="registerform">
+            <h2>Register</h2>
+
+            <div class="input-username">
+                <label>Full name:</label>
+                <input type="text" id="usernameinput" placeholder="Enter Full Name">
+            </div>
+
+            <div class="input-email">
+                <label>Email Address:</label>
+                <input type="email" id="emailinput" placeholder="Enter Email Address">
+            </div>
+
+            <div class="input-number">
+                <label>Phone Number:</label>
+                <input type="number" id="phonenumberinput" placeholder="Enter Phone Number">
+            </div>
+
+            <div class="input-password-group">
+                <label>Password:</label>
+                <div class="password-wrapper">
+                    <input type="password"  id="passwordinput" placeholder="Enter Password">
+                    <div class="eyes">
+                        <img src="img/hide.png" class="show-hide" id="passwordEye">
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-password-group">
+                <label>Confirm Password:</label>
+                <div class="password-wrapper">
+                    <input type="password" id="confirmpasswordinput" placeholder="Confirm Password">
+                    <div class="eyes">
+                        <img src="img/hide.png" class="show-hide" id="confirmEye">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="btn">
+                <button class="register-btn" id="registerbtn">Register</button>
+            </div>
+
+            <div class="login-option">
+                <span class="haveaccount">Already have an account?</span>
+                <a href="Login.html" class="loginlink">Login</a>
+            </div>
+
+        </form>
+        
+    </section>
+    <!-- FOOTER -->
+    <footer>
+        © 2026 HealthSync Inc. | All Rights Reserved
+    </footer>
+    <!-- SCRIPTS -->
+    <script src="Js/auth.js"></script>
+    <script src="Js/Register.js"></script>
+</body>
+</html>

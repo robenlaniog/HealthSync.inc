@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* BASE BODY */
+body {
+    background: #c6e3fb;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    min-height: 55px;
+    padding: 13px 8%;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* WEBSITE LOGO */
+.logo {
+    width: 280px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* NAVIGATION */
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 25px;
+}
+
+.main-nav {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #0d47a1;
+    font-weight: 600;
+    font-size: 18px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.main-nav a:hover {
+    color: #42a5f5;
+    border-bottom: 2px solid #42a5f5;
+    transform: translateY(-2px);
+}
+
+.main-nav a.active {
+    color: #42a5f5;
+    border-bottom: 2px solid #42a5f5;
+}
+
+/* ACCOUNT AND LOGOUT BUTTONS GROUP */
+.myaccount {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 15px;
+    padding-left: 15px;
+    border-left: 1px solid #ddd;
+    flex-shrink: 0;
+}
+
+.nav-auth-btn {
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    height: 42px;
+}
+
+.account-btn {
+    background: #1565c0;
+    color: white;
+}
+
+.account-btn:hover {
+    background: #0d47a1;
+    transform: translateY(-2px);
+}
+
+.logout-btn {
+    color: #d32f2f;
+    border: 2px solid #d32f2f;
+    background: transparent;
+}
+
+.logout-btn:hover {
+    background: #d32f2f;
+    color: white;
+}
+
+/* ── HERO ── */
+.hero {
+    background: #0b5ed7;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ── SECTIONS ── */
+.section {
+    padding: 80px 8%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.text-side,
+.image-side {
+    flex: 1;
+    min-width: 280px;
+}
+
+.text-side h2 {
+    font-size: 2.4rem;
+    color: #0b5ed7;
+    margin-bottom: 1.5rem;
+}
+
+.text-side p {
+    letter-spacing: 1.5px;
+    line-height: 1.7;
+}
+
+.image-side img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.mission-vision {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    padding: 45px 35px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    color: #0b5ed7;
+    margin-bottom: 1.2rem;
+    font-size: 1.6rem;
+}
+
+/* ── FOOTER ── */
+footer {
+    background: #0d47a1;
+    color: white;
+    text-align: center;
+    padding: 12.5px;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* ── RESPONSIVE: TABLET / LAPTOP (<1024px) */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 15px 5%;
+    }
+
+    .nav-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .main-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .myaccount {
+        border-left: none;
+        padding-left: 0;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .section {
+        padding: 60px 5%;
+    }
+
+    .container {
+        gap: 40px;
+    }
+}
+
+/* RESPONSIVE: MOBILES (<768px) */
+@media (max-width: 767px) {
+    .logo {
+        width: 220px;
+    }
+
+    .main-nav a {
+        font-size: 16px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .text-side h2 {
+        font-size: 1.8rem;
+    }
+
+    .section {
+        padding: 50px 5%;
+    }
+}
+
+/* RESPONSIVE: SMALL MOBILE DEVICES */
+@media (max-width: 480px) {
+    header {
+        padding: 12px 4%;
+    }
+
+    .logo {
+        width: 170px;
+    }
+
+    .main-nav a {
+        font-size: 14px;
+    }
+
+    .nav-auth-btn {
+        font-size: 13px;
+        padding: 7px 14px;
+        height: 38px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .card {
+        padding: 30px 20px;
+    }
+}
